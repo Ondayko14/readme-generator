@@ -12,11 +12,6 @@
   
     ![Image of the generators output](Assets\imgs\testScreenshot.png)
     
-  
-    ## Credits
-    undefined
-    * undefined
-    
   ## Licenses
   MIT
   
