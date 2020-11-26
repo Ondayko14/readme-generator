@@ -1,8 +1,15 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
+const fs = require('fs');
 
 // function to write README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, err => {
+        if(err) {
+            console.log(err);
+            return;
+        }
+    })
 }
 
 // function to initialize program
@@ -113,4 +120,8 @@ function init() {
 init()
 .then(readMeData => {
     return generateMarkdown(readMeData);
+})
+.then(generateResponse =>{
+    console.log("Success! Please check your README file");
+    return writeToFile('./README.md', generateResponse);
 });
