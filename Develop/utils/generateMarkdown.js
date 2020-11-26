@@ -14,10 +14,32 @@ const tableOfContents = (tableData) => {
 };
 
 const screenShots = (screenData) => {
-  console.log("First:", screenData);
   if (screenData.confirmScreenshot) {
     return`
     ![${screenData.screenShotDescription}](${screenData.screenShotName})
+    `;
+  } else {
+    return "";
+  };
+};
+
+const creditAdd = (creditData) => {
+  if(creditData){
+    return `
+    ## Credits
+    ${creditData.creditsNames}
+    * ${creditData.creditsLink}
+    `;
+  } else {
+    return "";
+  };
+};
+
+const featureAdd = (featureData) => {
+  if (featureData.features) {
+    return `
+    ## Features
+    ${featureData.features}
     `;
   } else {
     return "";
@@ -33,6 +55,10 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ${screenShots(data)}
+  ${creditAdd(data)}
+  ## Licenses
+  ${data.license}
+  ${featureAdd(data)}
 
 `;
 }
