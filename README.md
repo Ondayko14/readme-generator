@@ -9,7 +9,7 @@
     
   ## Usage
   Simply run the program, (NODE) and fill out the prompts. At the end you will be given an appropriate README.md files
-    ![Image of the generators output](/Assets/screenShot1.png)     
+    ![Image of the generators output](/Assets/Screenshot1.png)     
    
   ## Licenses
   MIT
