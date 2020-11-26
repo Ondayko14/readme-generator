@@ -59,6 +59,30 @@ function init() {
             default: false
         },
         {
+            type: 'input',
+            name: 'screenShotName',
+            message: 'Please insert the path to the screenshot you would like to use',
+            when: ({confirmScreenshot}) => {
+                if(confirmScreenshot) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            name: 'screenShotDescription',
+            message: 'Please insert alternate text for your screenshot',
+            when: ({confirmScreenshot}) => {
+                if(confirmScreenshot) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
             type: 'confirm',
             name: 'creditsConfirm',
             message: 'Were there any contributions made by collaberators?',
